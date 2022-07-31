@@ -14,3 +14,5 @@ echo "Moving text files to 'Text_files'..."
 move *.txt Text_files
 
 echo "Process completed successfully"
+cd c:
+tree
