@@ -6,7 +6,6 @@ Set-Location %DIRECTORY%
 # output ipconfig data to a file
 Get-NetIPAddress | Add-Content "IP.txt"
 
-
 # output a list of all users with local accounts on this system to a file
 netuser >> users.txt
 Write-Output Acquired: %TIME% on %DATE$ | Add-Content "users.txt"
