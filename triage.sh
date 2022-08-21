@@ -1,14 +1,16 @@
 #! /bin/bash
 
-$DIRECTORY ./{date +f %m-%d-%Y}/
+DIRECTORY=`date +%m-%d-%Y`
 mkdir ${DIRECTORY}
 cd ${DIRECTORY}
 
 # output ipconfig to a file
-ip -A >> ip.txt
+ifconfig >> ip.txt
 echo "\n\nAcquired: (date +%r) on (date +f %m-%d-%Y)" >> ip.txt
 
 # output running processes to a file
+ps >> processes.txt
+echo "\n\nAcquired: (date +%r) on (date +f %m-%d-%Y)" >> processes.txt
 
 # output a list of users 
 cat /etc/passwd | cut -d: -f1 >> users.txt 
