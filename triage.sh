@@ -1,8 +1,9 @@
 #! /bin/bash
 
-DIRECTORY=`date +%m-%d-%Y`
-mkdir ${DIRECTORY}
-cd ${DIRECTORY}
+date=`date +%m-%d-%Y`
+DIRECTORY = ~/Desktop/Scans/${DIRECTORY}
+mkdir -p $DIRECTORY
+cd $DIRECTORY
 
 # output ipconfig to a file
 # using ifconfig instead of ip a for compatibility
