@@ -7,7 +7,11 @@ cd $DIRECTORY
 
 # output ipconfig to a file
 # using ifconfig instead of ip a for compatibility
-ifconfig >> ip.txt
+if ip a; then
+    ip a >> ip.txt
+else
+    ifconfig >> ip.txt
+fi
 echo "\n\nAcquired: (date +%r) on (date +f %m-%d-%Y)" >> ip.txt
 
 # output running processes to a file
