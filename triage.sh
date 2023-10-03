@@ -14,6 +14,10 @@ else
 fi
 echo "\n\nAcquired: (date +%r) on (date +f %m-%d-%Y)" >> ip.txt
 
+#open ports
+netstat -tulpn >> ports.txt
+echo "Acquired: %(DATE)" >> ports.txt
+
 # output running processes to a file
 ps >> processes.txt
 echo "\n\nAcquired: (date +%r) on (date +f %m-%d-%Y)" >> processes.txt
